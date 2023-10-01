@@ -1,108 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Web Accessibility 2022</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Accessibility 2023</title>
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css'>
   <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.10/css/all.css'>
   <link rel="stylesheet prefetch" href="css/styles.css">
 </head>
 
 <body>
-  <div class="hero">
-    <div class="hero-head">
-      <div class="navbar">
-        <div class="container">
-          <div class="navbar-brand">
-            <a href="/" class="navbar-item logo-link">
-              <img src="./img/logo.png">
-            </a>
-            <button class="navbar-burger burger" data-target="navbarMenu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+    <header class="hero">
+      <div class="hero-head">
+        <navbar class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="/" class="navbar-item logo-link">
+                <img src="./img/logo.png" alt="logo">
+              </a>
+              <button type="menu" class="navbar-burger burger" data-target="navbarMenu">
+                <span class="visually-hidden"></span>
+                <span class="visually-hidden"></span>
+                <span class="visually-hidden"></span>
+              </button>
+            </div>
+  
+            <div id="navbarMenu" class="navbar-menu" aria-label="Skip navigation links">
+              <ul class="navbar-end">
+                <span class="navbar-item">
+                  <a class="button is-white is-outlined" href="#hero-body" tabindex="0">
+                    <span class="icon">
+                      <i class="fa fa-home"></i>
+                    </span>
+                    <span>Home</span>
+                  </a>
+                </span>
+                <span class="navbar-item">
+                  <a class="button is-white is-outlined with-sublist" href="#services" tabindex="0">
+                    <span class="icon">
+                      <i class="fab fa-superpowers"></i>
+                    </span>
+                    <span>Services</span>
+                  </a>
+                  <ul class="sublist hidden">
+                    <li>Design</li>
+                    <li>Consult</li>
+                    <li>Engineer</li>
+                    <li>Operate</li>
+                    <li>Optimize</li>
+                  </ul>
+                </span>
+                <span class="navbar-item">
+                  <a class="button is-white is-outlined" href="#success-stories" tabindex="0">
+                    <span class="icon">
+                      <i class="fa fa-book"></i>
+                    </span>
+                    <span>Success stories</span>
+                  </a>
+                </span>
+                <span class="navbar-item">
+                  <a class="button is-white is-outlined" tabindex="0">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>View Source</span>
+                    <span class="visually-hidden">will open in a new tab</span>
+                  </a>
+                </span>
+              </ul>
+            </div>
           </div>
-
-          <div id="navbarMenu" class="navbar-menu">
-            <ul class="navbar-end">
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
-                  <span class="icon">
-                    <i class="fa fa-home"></i>
-                  </span>
-                  <span>Home</span>
-                </a>
-              </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined with-sublist">
-                  <span class="icon">
-                    <i class="fab fa-superpowers"></i>
-                  </span>
-                  <span>Services</span>
-                </a>
-                <ul class="sublist hidden">
-                  <li>Design</li>
-                  <li>Consult</li>
-                  <li>Engineer</li>
-                  <li>Operate</li>
-                  <li>Optimize</li>
-                </ul>
-              </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
-                  <span class="icon">
-                    <i class="fa fa-book"></i>
-                  </span>
-                  <span>Success stories</span>
-                </a>
-              </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>View Source</span>
-                </a>
-              </span>
-            </ul>
-          </div>
-        </div>
+        </navbar>
       </div>
-    </div>
-  </div>
+    </header>
 
-  <div class="hero-bg hero-body is-fullheight">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <ol>
+        <li>
+          <a href="#">
+            page1
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            paga2
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            page3
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-current="page">
+            home page
+          </a>
+        </li>
+      </ol>
+    </nav>
+
+  <section class="section hero-bg hero-body is-fullheight">
     <div class="container has-text-centered">
       <div class="column is-10 is-offset-1">
-        <div class="title has-text-white">We have web accessibility in mind</div>
+        <h1 class="title has-text-white">We have web accessibility in mind</h1>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section" id="subscription">
+  <section class="section" id="subscription">
     <div class="section-heading has-text-centered">
       <div class="column is-8 is-offset-2">
-      <div class="title is-2">Would you like to get the latest news?</div>
-        <div class="subtitle is-5">Subscribe to our events, updates and more</div>
-      <div class="box has-background-grey-light">
-        <div class="field is-grouped">
-          <p class="control is-expanded">
-            <input class="input">
-          </p>
-          <p class="control">
-            <a class="button is-info">Notify Me</a>
-          </p>
+        <h2 class="title is-2">Would you like to get the latest news?</h2>
+        <h5 class="subtitle is-5">Subscribe to our events, updates and more</h5>
+        <div class="box has-background-grey-light">
+          <div class="field is-grouped">
+            <p class="control is-expanded">
+              <input class="input">
+            </p>
+            <p class="control">
+              <a class="button is-info" tabindex="0">Notify Me</a>
+            </p>
+          </div>
         </div>
       </div>
-      </div>
     </div>
+  </section>
 
-  <div class="section" id="about">
+  <section class="section" id="about">
     <div class="section-heading has-text-centered">
-      <div class="title is-2">About Us</div>
-      <div class="subtitle is-5">We of all trades, master of "some"</div>
+      <h2 class="title is-2">About Us</h2>
+      <h5 class="subtitle is-5">We of all trades, master of "some"</h5>
       <div class="container">
         <p>Web developers with more than <b>4 years</b> of well-rounded experience with a degree in the
           field of
@@ -114,78 +143,81 @@
     </div>
 
     <div class="content container">
-      <div class="is-1 title">OUR HISTORY</div>
-      <p>Since 1989<sup><a>[1]</a></sup>, we deliver high quality solutions to make your business more accessible.</p>
-      <div class="is-2 title">1989</div>
+      <h2 class="is-2 title">OUR HISTORY</h2>
+      <p>Since 1989<sup><a href="#">[1]<span class="visually-hidden">will open in a new tab</span></a></sup>, we deliver high quality solutions to make your business more accessible.</p>
+      <h3 class="is-3 title">1989</h3>
       <p>On February 1989, seventeen people met to talk, ski, relax, and try to find common ground.</p>
       <ul>
         <li>- We all felt privileged to work with a group of people who held a set of compatible value.</li>
         <li>- We all want to deliver good products to customers.</li>
       </ul>
-      <div class="is-3 title">2022</div>
-      <p>Generally we have achieved <a>all our major goals</a>. And we are ready to help you to achieve yours</p>
+      <h3 class="is-3 title">2022</h3>
+      <p>Generally we have achieved <a href="#">all our major goals<span class="visually-hidden">will open in a new tab</span></a>. And we are ready to help you to achieve yours</p>
       <div class="blockquote">Success usually comes to those who are too busy looking for it. - Henry David Thoreau</div>
       <p>We believe in investing in people. For 30+ years, the company has been expanding its expertise worldwide through numerous educational activities and materials to help beginners in tech gain in-demand skills.</p>
-      <div class="is-2 title">2023</div>
-      <p>Please take a llok at our plans</p>
+      <h3 class="is-3 title">2023</h3>
       <table>
+        <caption >Please take a llok at our plans</caption>
         <tr>
-          <td>Header</td>
-          <td>Header</td>
+          <td></td>
+          <th>Date</th>
+          <th>Plans</th>
         </tr>
         <tr>
+          <th scope="row">1</th>
           <td>cell</td>
           <td>cell</td>
         </tr>
         <tr>
+          <th scope="row">2</th>
           <td>cell</td>
           <td>cell</td>
         </tr>
       </table>
     </div>
-  </div>
+  </section>
 
-  <div class="hero has-background-grey-light">
+  <section class="section hero has-background-grey-light" id="services">
     <div class="container features">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Our services</div>
-        <div class="subtitle is-5">We help our customers to increase value</div>
+        <h2 class="title is-2">Our services</h2>
+        <h5 class="subtitle is-5">We help our customers to increase value</h5>
       </div>
 
-      <figure>
-        <img src="./img/IMG_5067_72DPI-RGB_.jpg">
-        <img src="./img/iStock_73271969_web.jpg">
+      <figure role="group">
+        <img src="./img/IMG_5067_72DPI-RGB_.jpg" alt="Bar chart showing monthly and total visitors for the first quarter 2023 for sites 1 to 3">
+        <img src="./img/iStock_73271969_web.jpg" alt="Bar chart showing monthly and total visitors for the first quarter 2023 for sites 4 to 6">
         <figcaption>
           Figure 1: Some attractive pictures to ensure our customers
         </figcaption>
       </figure>
-      </div>
     </div>
   </div>
+  </section>
 
   <div class="hero is-info">
     <div class="hero-body">
       <div class="container">
-        <div class="title">Our achievements</div>
-        <div class="subtitle">We are always ready to tell you about our success</div>
+        <h2 class="title is-2">Our achievements</h2>
+        <h4 class="subtitle is-4">We are always ready to tell you about our success</h4>
       </div>
     </div>
     <div class="tabs is-boxed is-centered main-menu" id="nav">
       <ul>
         <li data-target="pane-1" id="1" class="is-active">
-          <a>
+          <a tabindex="0">
             <span class="icon is-small"><i class="fa fa-image"></i></span>
             <span>Success stories</span>
           </a>
         </li>
         <li data-target="pane-3" id="3">
-          <a>
+          <a tabindex="0">
             <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
             <span>Our team</span>
           </a>
         </li>
         <li data-target="pane-4" id="4">
-          <a>
+          <a tabindex="0">
             <span class="icon is-small"><i class="fa fa-film"></i></span>
             <span>Video</span>
           </a>
@@ -194,7 +226,7 @@
     </div>
   </div>
 
-  <div class="tab-content container">
+  <section class="tab-content container" id="success-stories">
     <div class="tab-pane is-active" id="pane-1" class="level">
       <div class="container">
         <div class="columns features">
@@ -202,7 +234,7 @@
             <div class="card">
               <div class="card-image">
                 <div class="image">
-                  <img src="./img/tab-1.jpg" class="modal-button">
+                  <img src="./img/tab-1.jpg" class="modal-button" alt="Best customer's story 1">
                 </div>
               </div>
               <div class="card-content">
@@ -210,7 +242,7 @@
                   <div>Best customer's story</div>
                   <p>We have achieved customer satisfaction and income increase after having implemented accessibility.</p>
                   <p>That's a real magic!</p>
-                  <span class="button is-link modal-button" data-target="modal-image1">Learn more</span>
+                  <span class="button is-link modal-button" data-target="modal-image1" tabindex="0">Learn more</span>
                 </div>
               </div>
             </div>
@@ -219,7 +251,7 @@
             <div class="card">
               <div class="card-image">
                 <div class="image">
-                  <img src="./img/tab-2.jpg">
+                  <img src="./img/tab-2.jpg" alt="Best customer's story 2">
                 </div>
               </div>
               <div class="card-content">
@@ -227,7 +259,7 @@
                   <div>Other Best customer's story.</div>
                   <p>We were not so sure in success but we have had lots of new customers after implementing accessibility.</p>
                   <p>We will recommend Best Company to our friends!</p>
-                  <span class="button is-link modal-button" data-target="modal-card">Learn more</span>
+                  <span class="button is-link modal-button" data-target="modal-card" tabindex="0">Learn more</span>
                 </div>
               </div>
             </div>
@@ -246,7 +278,10 @@
             <div class="media-content">
               <div class="content">
                 <p>
-                  <a><b>Solution architect</b></a>
+                  <a href="#">
+                    <b>Solution architect</b>
+                    <span class="visually-hidden">will open in a new tab</span>
+                  </a>
                   <br> Please read about our team happiness
                 </p>
               </div>
@@ -261,7 +296,10 @@
             <div class="media-content">
               <div class="content">
                 <p>
-                  <a><b>Business Analyst</b></a>
+                  <a href="#">
+                    <b>Business Analyst</b>
+                    <span class="visually-hidden">will open in a new tab</span>
+                  </a>
                   <br> Please read about BA growth opportunities
                 </p>
               </div>
@@ -274,152 +312,156 @@
     <div class="tab-pane" id="pane-4">
       <div class="columns is-centered">
         <div class="column is-three-quarters">
-          <div class="title has-text-centered">Inspired video</div>
+          <h3 class="title has-text-centered">Inspired video</h3>
           <div class="embed-container image">
             <iframe src="https://player.vimeo.com/video/261794608" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section has-background-grey-lighter">
+  <section class="section has-background-grey-lighter">
     <div class="container has-text-centered">
         <div class="section-heading has-text-centered">
-          <div class="title is-2">Upcoming events</div>
-          <div class="subtitle is-5">Outcoming dates for the best options</div>
+          <h2 class="title is-2">Upcoming events</h2>
+          <h5 class="subtitle is-5">Outcoming dates for the best options</h5>
         </div>
 
       <div class="tile is-ancestor">
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="./img/access.jpg">
+              <img src="./img/access.jpg" alt="Accessibility event in Los Angeles">
             </div>
-            <p class="title">Accessibility event in Los Angeles</p>
-            <p class="subtitle">Fri 27 Nov 2023</p>
-            <a class="button">Buy Tickets</a>
+            <h3 class="title">Accessibility event in Los Angeles</h3>
+            <h5 class="subtitle">Fri 27 Nov 2023</h5>
+            <a class="button" tabindex="0">Buy Tickets</a>
           </div>
         </div>
         <div class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
-              <img src="./img/images.jpg">
+              <img src="./img/images.jpg" alt="Accessibility event in Paris">
             </div>
-            <p class="title">Accessibility event in Paris</p>
-            <p class="subtitle">Fri 27 Nov 2023</p>
-            <a class="button">Buy Tickets</a>
+            <h3 class="title">Accessibility event in Paris</h3>
+            <h5 class="subtitle">Fri 27 Nov 2023</h5>
+            <a class="button" tabindex="0">Buy Tickets</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section has-background-light">
+  <section class="section has-background-light">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Contact us</div>
-        <div class="subtitle is-5">Don't hesitate, ask anything</div>
+        <h2 class="title is-2">Contact us</h2>
+        <h5 class="subtitle is-5">Don't hesitate, ask anything</h5>
       </div>
 
       <form class="column is-half is-offset-one-quarter box">
-        <div class="field">
-          <label class="label">Name</label>
-          <div class="control">
-            <input class="input" type="text" placeholder="Text input">
-          </div>
-        </div>
-
-        <div class="field">
-          <label class="label">Username</label>
-          <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text">
-            <span class="icon is-small is-left">
-              <i class="fas fa-user"></i>
-            </span>
-            <span class="icon is-small is-right">
-              <i class="fas fa-check"></i>
-            </span>
-          </div>
-          <p class="help is-success">This username is available</p>
-        </div>
-
-        <div class="field">
-          <label class="label">Email</label>
-          <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-            <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <span class="icon is-small is-right">
-              <i class="fas fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <p class="help is-danger">This email is invalid</p>
-        </div>
-
-        <div class="field">
-          <label class="label">Subject</label>
-          <div class="control">
-            <div class="select">
-              <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
+        <fieldset>
+          <div class="field">
+            <label class="label" for="form-name">Name</label>
+            <div class="control">
+              <input class="input" id="form-name" type="text" placeholder="Text input">
             </div>
           </div>
-        </div>
-
-        <div class="field">
-          <label class="label">Message</label>
-          <div class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
+  
+          <div class="field">
+            <label class="label" for="form-username">Username</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-success" id="form-username" type="text">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </div>
+            <p class="help is-success">This username is available</p>
           </div>
-        </div>
-
-        <div class="field">
-          <div class="control">
-            <label class="checkbox">
-              <input type="checkbox">
-              I agree to the <a>terms and conditions</a>
-            </label>
+  
+          <div class="field">
+            <label class="label" for="form-email">Email</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-danger" id="form-email" type="email" placeholder="Email input" value="hello@">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <p class="help is-danger">This email is invalid</p>
           </div>
-        </div>
-
-        <div class="field">
-          <div class="control">
-            <label class="radio">
-              <input type="radio" name="question">
-              Yes
-            </label>
-            <label class="radio">
-              <input type="radio" name="question">
-              No
-            </label>
+  
+          <div class="field">
+            <label class="label">Subject</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>Select dropdown</option>
+                  <option>With options</option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div class="field is-grouped">
-          <div class="control">
-            <button class="button is-link">Submit</button>
+  
+          <div class="field">
+            <label class="label" for="form-message">Message</label>
+            <div class="control">
+              <textarea class="textarea" id="form-message" placeholder="Textarea"></textarea>
+            </div>
           </div>
-          <div class="control">
-            <button class="button is-text">Cancel</button>
+  
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox">
+                I agree to the <a href="#">terms and conditions
+                  <span class="visually-hidden">will open in a new tab</span>
+                </a>
+              </label>
+            </div>
           </div>
-        </div>
+  
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="question">
+                Yes
+              </label>
+              <label class="radio">
+                <input type="radio" name="question">
+                No
+              </label>
+            </div>
+          </div>
+  
+          <div class="field is-grouped">
+            <div class="control">
+              <button type="submit" class="button is-link">Submit</button>
+            </div>
+            <div class="control">
+              <button type="reset" class="button is-text">Cancel</button>
+            </div>
+          </div>
+        </fieldset>
       </form>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="section">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Forum</div>
-        <div class="subtitle is-5">Discuss any topic with no leaving this page</div>
+        <h2 class="title is-2">Forum</h2>
+        <h5 class="subtitle is-5">Discuss any topic with no leaving this page</h5>
       </div>
       <div class="columns">
         <div class="column is-3">
-          <a class="button is-primary is-block is-alt is-large">New Post</a>
+          <a class="button is-primary is-block is-alt is-large" tabindex="0">New Post</a>
         </div>
         <div class="column is-9">
           <div class="box content">
@@ -428,13 +470,15 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=300">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=300" alt="@jsmith">
                   </p>
                 </div>
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <a>@jsmith</a> replied 34 minutes ago &nbsp;
+                      <a href="#">@jsmith
+                        <span class="visually-hidden">will open in a new tab</span>
+                      </a> replied 34 minutes ago &nbsp;
                       <span class="tag">Question</span>
                     </p>
                   </div>
@@ -450,13 +494,15 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=301">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=301" alt="@red">
                   </p>
                 </div>
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <a>@red</a> replied 40 minutes ago &nbsp;
+                      <a href="#">@red
+                        <span class="visually-hidden">will open in a new tab</span>
+                      </a> replied 40 minutes ago &nbsp;
                       <span class="tag">Question</span>
                     </p>
                   </div>
@@ -470,36 +516,62 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="columns">
         <div class="column is-3 is-offset-4">
-          <div class="is-3 title"><b>News</b></div>
+          <h3 class="is-3 title"><b>News</b></h3>
           <ul>
-            <li><a>Latest changes in specification</a></li>
-            <li><a>Our new courses and trainings</a></li>
+            <li>
+              <a href="#">
+                latest changes in specification
+                <span class="visually-hidden">will open in a new tab</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">our new courses and trainings
+                <span class="visually-hidden">will open in a new tab</span>
+              </a>
+            </li>
           </ul>
         </div>
         <div class="column is-4">
-          <div class="is-3 title"><b>Help</b></div>
+          <h3 class="is-3 title"><b>Help</b></h3>
           <ul>
-            <li><a>Useful links</a></li>
-            <li><a>How to find us</a></li>
+            <li>
+              <a href="#">useful resources
+              <span class="visually-hidden">will open in a new tab</span>
+            </a>
+            </li>
+            <li>
+              <a href="#">how to find us
+                <span class="visually-hidden">will open in a new tab</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
 
       <div class="content has-text-centered">
         <div class="soc">
-          <a><i class="fab fa-github-alt fa-2x"></i></a>
-          <a><i class="fab fa-youtube fa-2x"></i></a>
+          <a href="#">
+            <i class="fab fa-github-alt fa-2x"></i>
+            <span class="visually-hidden">will open in a new tab</span>
+          </a>
+          <a href="#">
+            <i class="fab fa-youtube fa-2x"></i>
+            <span class="visually-hidden">will open in a new tab</span>
+          </a>
         </div>
-        <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+        <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">
+          MIT
+          <span class="visually-hidden">will open in a new tab</span>
+        </a>.</p>
       </div>
     </div>
-  </div>
+  </footer>
 
   <div id="modal-card" class="modal modal-fx-3dSlit">
     <div class="modal-background"></div>
@@ -507,14 +579,14 @@
       <div class="card">
         <div class="card-image">
           <div class="image is-4by3">
-            <img src="https://source.unsplash.com/random/?sig=2">
+            <img src="https://source.unsplash.com/random/?sig=2" alt="card image">
           </div>
         </div>
         <div class="card-content">
           <div class="media">
             <div class="media-content">
-              <div class="title is-4">Best airways</div>
-              <div class="subtitle is-6">Our way to success</div>
+              <h4 class="title is-4">Best airways</h4>
+              <h6 class="subtitle is-6">Our way to success</h6>
             </div>
           </div>
           <div class="content">
@@ -533,7 +605,7 @@
   <div id="modal-image1" class="modal modal-fx-3dSlit">
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
-      <img src="https://source.unsplash.com/random/?sig=1">
+      <img src="https://source.unsplash.com/random/?sig=1" alt="Best airways">
     </div>
     <button class="modal-close is-large"></button>
   </div>

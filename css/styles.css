@@ -33,6 +33,9 @@ figure {
   margin-bottom: -1px !important;
   position: relative;
 }
+.tabs li a:focus {
+  outline: 2px dashed orange;
+}
 .tab-content {
   padding: 2rem;
 }
@@ -46,7 +49,9 @@ figure {
 .is-active {
   display: initial;
 }
-
+.visually-hidden {
+  display: none;
+}
 .card {
   height: 100%;
 }
@@ -136,6 +141,10 @@ figure {
   padding: 0 .75rem;
 }
 
+.button:focus, .navbar-burger:focus {
+  outline: dashed 2px orange;
+}
+
 .button.is-primary.is-alt {
   background: linear-gradient(to bottom, #0072ff, #00c6ff);
   font-weight: 700;
@@ -199,6 +208,11 @@ figure {
 .logo-link img {
   width: 100%;
 }
+
+.logo-link:focus {
+  outline: 2px dashed orange;
+}
+
 
 li {
   list-style: none;
