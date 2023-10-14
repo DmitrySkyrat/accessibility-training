@@ -33,6 +33,9 @@ figure {
   margin-bottom: -1px !important;
   position: relative;
 }
+.tabs li a:focus {
+  outline: 2px solid black;
+}
 .tab-content {
   padding: 2rem;
 }
@@ -46,7 +49,9 @@ figure {
 .is-active {
   display: initial;
 }
-
+.visually-hidden {
+  display: none;
+}
 .card {
   height: 100%;
 }
@@ -136,6 +141,10 @@ figure {
   padding: 0 .75rem;
 }
 
+.button:focus, .navbar-burger:focus {
+  outline: solid 2px black;
+}
+
 .button.is-primary.is-alt {
   background: linear-gradient(to bottom, #0072ff, #00c6ff);
   font-weight: 700;
@@ -185,6 +194,63 @@ figure {
   padding: 0.4em 1em
 }
 
+.notify-me {
+  align-items: end;
+}
+
+.breadcrumb, .best-company-link {
+  text-decoration: underline;
+  color: blue;
+}
+
+.hero.is-info {
+  background-color: #5567ef;
+}
+
+.is-info.button {
+  background-color: #2038ee;
+}
+
+.tab-txt {
+  color: #000;
+}
+
+.help.is-success {
+  color: rgb(10, 80, 10);
+}
+
+.help.is-danger {
+  color: rgb(124, 7, 7);
+}
+
+.has-background-grey-light {
+  background-color: rgb(243, 238, 238)!important;
+}
+
+.has-text-grey-light {
+  color: rgb(48, 43, 43) !important;
+}
+
+.card-image-title {
+  text-align: center;
+}
+
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  opacity: 0;
+}
+
+.skip-to-main-content-link:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
 @media screen and (max-width: 1087px) {
   .navbar-menu {
     background-color: #888;
@@ -199,6 +265,11 @@ figure {
 .logo-link img {
   width: 100%;
 }
+
+.logo-link:focus {
+  outline: 2px solid red;
+}
+
 
 li {
   list-style: none;
