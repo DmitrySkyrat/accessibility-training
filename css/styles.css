@@ -220,7 +220,7 @@ figure {
 }
 
 .help.is-danger {
-  color: rgb(124, 7, 7);
+  color: rgba(251, 4, 4, 0.6);
 }
 
 .has-background-grey-light {
