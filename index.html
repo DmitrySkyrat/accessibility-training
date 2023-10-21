@@ -15,13 +15,13 @@
     <a class="skip-to-main-content-link" href="#subscription">Skip to main content</a>
     <header class="hero" role="banner" aria-label="Header">
       <div class="hero-head">
-        <navbar class="navbar" role="navigation" aria-label="Main Navigation">
+        <nav class="navbar" aria-label="Main Navigation">
           <div class="container">
             <div class="navbar-brand">
               <a href="#" class="navbar-item logo-link" aria-label="Home Link (Best Company Logo)">
                 <img src="./img/logo.png" alt="Best Company Logo">
               </a>
-              <button type="menu" class="navbar-burger burger" data-target="navbarMenu" aria-label="navbarMenu">
+              <button type="menu" class="navbar-burger burger" data-target="navbarMenu" aria-label="Menu">
                 <span class="visually-hidden" aria-hidden="true"></span>
                 <span class="visually-hidden" aria-hidden="true"></span>
                 <span class="visually-hidden" aria-hidden="true"></span>
@@ -29,39 +29,39 @@
             </div>
   
             <div id="navbarMenu" class="navbar-menu" aria-label="Skip navigation links">
-              <ul class="navbar-end" role="list">
-                <span role="listitem" class="navbar-item">
+              <ul class="navbar-end">
+                <li class="navbar-item">
                   <button class="button is-white is-outlined">
                     <span class="icon">
                       <i class="fa fa-home"></i>
                     </span>
                     <span>Home</span>
                   </button>
-                </span>
-                <span role="listitem" class="navbar-item">
+                </li>
+                <li class="navbar-item">
                   <button class="button is-white is-outlined with-sublist" aria-controls="dropdown-menu" aria-expanded="false">
                     <span class="icon">
                       <i class="fab fa-superpowers"></i>
                     </span>
-                    <span>Services</span>
+                    <span id="services">Services</span>
                   </button>
-                  <ul class="sublist hidden" id="dropdown-menu" aria-hidden="true">
+                  <ul class="sublist hidden" id="dropdown-menu" aria-hidden="true" aria-labelledby="services">
                     <li aria-setsize="5" aria-posinset="1">Design</li>
                     <li aria-setsize="5" aria-posinset="2">Consult</li>
                     <li aria-setsize="5" aria-posinset="3">Engineer</li>
                     <li aria-setsize="5" aria-posinset="4">Operate</li>
                     <li aria-setsize="5" aria-posinset="5">Optimize</li>
                   </ul>
-                </span>
-                <span role="listitem" class="navbar-item">
+                </li>
+                <li class="navbar-item">
                   <button class="button is-white is-outlined">
                     <span class="icon">
                       <i class="fa fa-book"></i>
                     </span>
                     <span>Success stories</span>
                   </button>
-                </span>
-                <span role="listitem" class="navbar-item">
+                </li>
+                <li class="navbar-item">
                   <button class="button is-white is-outlined">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -69,15 +69,15 @@
                     <span>View Source</span>
                     <span class="visually-hidden">will open in a new tab</span>
                   </button>
-                </span>
+                </li>
               </ul>
             </div>
           </div>
-        </navbar>
+        </nav>
       </div>
     </header>
 
-    <nav aria-label="Breadcrumb" class="breadcrumb" role="navigation">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
       <ol>
         <li>
           <a href="page1" onclick="return false;">
@@ -158,10 +158,8 @@
       <div class="blockquote">Success usually comes to those who are too busy looking for it. - Henry David Thoreau</div>
       <p>We believe in investing in people. For 30+ years, the company has been expanding its expertise worldwide through numerous educational activities and materials to help beginners in tech gain in-demand skills.</p>
       <h2 class="is-3 title">2023</h2>
-      <table
-        aria-label="Our plans"
-        aria-describedby="our_plans_desc">
-        <caption id="our_plans_desc">Please take a look at our plans</caption>
+      <table>
+        <caption>Please take a look at our plans</caption>
         <tr>
           <td></td>
           <th>Date</th>
@@ -185,7 +183,7 @@
     <div class="container features">
       <div class="section-heading has-text-centered">
         <h2 class="title is-2">Our services</h2>
-        <h2 class="subtitle is-3">We help our customers to increase value</h2>
+        <p class="subtitle is-3">We help our customers to increase value</p>
       </div>
 
       <figure role="group">
@@ -394,7 +392,7 @@
             <div class="field">
               <label class="label" for="form-email">Email</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="input is-danger" id="form-email" type="email" aria-placeholder="Enter your email" value="hello@">
+                <input role="alert" class="input is-danger" id="form-email" type="email" aria-placeholder="Enter your email" value="hello@">
                 <div class="help" id="form-email">Please enter a valid email address</div>
                 <span class="icon is-small is-left">
                   <i class="fas fa-envelope"></i>
@@ -442,11 +440,15 @@
                 </label>
               </div>
             </div>
+          </fieldset>
     
+          <fieldset>
+            <legend>Do you want personal call?</legend>
             <div class="field" role="radiogroup">
               <div class="control">
-                <label class="radio">
-                  <input 
+                <label class="radio" for="yes">
+                  <input
+                    id="yes"
                     role="radio" 
                     type="radio" 
                     name="question" 
@@ -454,8 +456,9 @@
                     aria-checked="false">
                   Yes
                 </label>
-                <label class="radio">
+                <label class="radio" for="no">
                   <input 
+                    id="no"
                     role="radio" 
                     type="radio" 
                     name="question" 
@@ -547,7 +550,7 @@
     </div>
   </section>
 
-  <footer class="footer" aria-label="Footer">
+  <footer class="footer">
     <div class="container">
       <div class="columns">
         <div class="column is-3 is-offset-4">
@@ -643,10 +646,11 @@
     id="modal-image1" 
     class="modal modal-fx-3dSlit" 
     role="dialog"
-    aria-labelledby="dialog2Img">
+    aria-label="dialog2Img"
+    aria-modal="true">
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
-      <img id="dialog2Img" src="https://source.unsplash.com/random/?sig=1" alt="Best airways">
+      <img src="https://source.unsplash.com/random/?sig=1" alt="Best airways">
     </div>
     <button class="modal-close is-large visually-hidden">modal close</button>
   </div>
