@@ -38,19 +38,18 @@
                     <span>Home</span>
                   </button>
                 </li>
-                <li class="navbar-item">
-                  <button class="button is-white is-outlined with-sublist" aria-controls="dropdown-menu" aria-expanded="false">
-                    <span class="icon">
-                      <i class="fab fa-superpowers"></i>
-                    </span>
-                    <span id="services">Services</span>
-                  </button>
-                  <ul class="sublist hidden" id="dropdown-menu" aria-hidden="true" aria-labelledby="services">
-                    <li aria-setsize="5" aria-posinset="1">Design</li>
-                    <li aria-setsize="5" aria-posinset="2">Consult</li>
-                    <li aria-setsize="5" aria-posinset="3">Engineer</li>
-                    <li aria-setsize="5" aria-posinset="4">Operate</li>
-                    <li aria-setsize="5" aria-posinset="5">Optimize</li>
+                <li class="navbar-item menubar-editor">
+                  <ul role="menubar" aria-label="List of services">
+                    <li role="none">
+                      <span role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0">Services<span aria-hidden="true"></span></span>
+                      <ul role="menu" data-option="font-family" aria-label="Services">
+                        <li role="menuitemradio" aria-checked="true"><span aria-hidden="true">Design</span></li>
+                        <li role="menuitemradio" aria-checked="false"><span aria-hidden="true">Consult</span></li>
+                        <li role="menuitemradio" aria-checked="false"><span aria-hidden="true">Engineer</span></li>
+                        <li role="menuitemradio" aria-checked="false"><span aria-hidden="true">Operate</span></li>
+                        <li role="menuitemradio" aria-checked="false"><span aria-hidden="true">Optimize</span></li>
+                      </ul>
+                    </li>
                   </ul>
                 </li>
                 <li class="navbar-item">
@@ -205,21 +204,21 @@
       </div>
     </div>
     <div class="tabs is-boxed is-centered main-menu" id="nav">
-      <ul role="tablist" aria-label="Achievements tabs">
+      <ul role="tablist" class="achievements" aria-label="Achievements tabs">
         <li role="tab" data-target="panel-1" id="tab-1" class="is-active" aria-selected="true" aria-controls="panel-1">
-          <a href="success-stories" onclick="return false;">
+          <a class="focus" href="success-stories" onclick="return false;">
             <span class="icon is-small"><i class="fa fa-image"></i></span>
             <span class="tab-txt">Success stories</span>
           </a>
         </li>
         <li role="tab" data-target="panel-2" id="tab-2" aria-selected="false" aria-controls="panel-2">
-          <a href="our-team" onclick="return false;">
+          <a class="focus" href="our-team" onclick="return false;">
             <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
             <span class="tab-txt">Our team</span>
           </a>
         </li>
         <li role="tab" data-target="panel-3" id="tab-3" aria-selected="false" aria-controls="panel-3">
-          <a href="video" onclick="return false;">
+          <a class="focus" href="video" onclick="return false;">
             <span class="icon is-small"><i class="fa fa-film"></i></span>
             <span class="tab-txt">Video</span>
           </a>
